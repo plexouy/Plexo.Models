@@ -21,7 +21,7 @@ namespace Goova.Plexo.Helpers
             _cert = cert;
             _rsa = priv ? cert.GetRSAPrivateKey() : cert.GetRSAPublicKey();
         }
-        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.Utc };
+        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.Local };
 
         public PublicKeyInfo GetPublicKey()
         {
@@ -89,13 +89,10 @@ namespace Goova.Plexo.Helpers
                         if (n.Value is DateTime)
                         {
                             DateTime dt = (DateTime)n.Value;
-                            if (dt.Kind != DateTimeKind.Utc)
+                            if (dt.Kind != DateTimeKind.Local)
                             {
-                                if (dt.Kind == DateTimeKind.Unspecified)
-                                {
-                                    dt = DateTime.SpecifyKind(dt, DateTimeKind.Local);
-                                }
-                                n.Value = dt.ToUniversalTime();
+                                dt = dt.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(dt, DateTimeKind.Local) : dt.ToLocalTime();
+                                n.Value = dt;
                             }
                         }
                     }
