@@ -12,6 +12,7 @@ namespace Goova.Plexo
         [EnumMember]
         Expired,
         [EnumMember]
-        Disabled
+        Disabled,
+        
     }
 }
