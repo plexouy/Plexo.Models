@@ -21,13 +21,13 @@ namespace Goova.Plexo.Helpers
             _cert = cert;
             _rsa = priv ? cert.GetRSAPrivateKey() : cert.GetRSAPublicKey();
         }
-        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.RoundtripKind };
+        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.Utc };
 
         public PublicKeyInfo GetPublicKey()
         {
-            PublicKeyInfo info=new PublicKeyInfo();
+            PublicKeyInfo info = new PublicKeyInfo();
             info.Fingerprint = _cert.Thumbprint;
-            info.Key=Convert.ToBase64String(_cert.Export(X509ContentType.Cert));
+            info.Key = Convert.ToBase64String(_cert.Export(X509ContentType.Cert));
             return info;
         }
         public TS Verify<T, TS>(T obj) where T : SignedObject<TS>
@@ -54,10 +54,10 @@ namespace Goova.Plexo.Helpers
                 throw new SignatureException("Object has expired");
 
         }
-        public T Sign<T,TS>(TS obj) where T: SignedObject<TS>, new()
+        public T Sign<T, TS>(TS obj) where T : SignedObject<TS>, new()
         {
             T t = new T();
-            t.Object=new StateObject<TS>();
+            t.Object = new StateObject<TS>();
             t.Object.UTCUnixTimeExpiration = (long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds + DefaultExpirationTimeInSeconds;
             t.Object.Fingerprint = _cert.Thumbprint;
             t.Object.Object = obj;
@@ -65,7 +65,7 @@ namespace Goova.Plexo.Helpers
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
             byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, serSettings));
-            t.Signature= Convert.ToBase64String(_rsa.SignData(body, HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1));
+            t.Signature = Convert.ToBase64String(_rsa.SignData(body, HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1));
             return t;
         }
         private static JObject SortPropertiesAlphabetically(JObject original)
@@ -83,6 +83,22 @@ namespace Goova.Plexo.Helpers
                 }
                 else
                 {
+                    if (property.Value is JValue)
+                    {
+                        JValue n = (JValue)property.Value;
+                        if (n.Value is DateTime)
+                        {
+                            DateTime dt = (DateTime)n.Value;
+                            if (dt.Kind != DateTimeKind.Utc)
+                            {
+                                if (dt.Kind == DateTimeKind.Unspecified)
+                                {
+                                    dt = DateTime.SpecifyKind(dt, DateTimeKind.Local);
+                                }
+                                n.Value = dt.ToUniversalTime();
+                            }
+                        }
+                    }
                     result.Add(property.Name, property.Value);
                 }
             }
