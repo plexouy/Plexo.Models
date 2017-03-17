@@ -58,11 +58,8 @@
     <Compile Include="Exceptions\MessageExpiredException.cs" />
     <Compile Include="Exceptions\ResultCodeException.cs" />
     <Compile Include="Exceptions\SignatureException.cs" />
-    <Compile Include="Helpers\ContextScope.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
-    <Compile Include="Helpers\OperationContextPreservingSynchronizationContext.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
-    <Compile Include="Helpers\PropagateOperationContext.cs" />
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />
     <Compile Include="CancelRequest.cs" />
