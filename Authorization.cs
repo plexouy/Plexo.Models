@@ -19,8 +19,11 @@ namespace Goova.Plexo
         [DataMember]
         public Dictionary<string, object> ClientInformation { get; set; }
         [DataMember]
+        public bool AskForClientExtendedCredit { get; set; }
+        [DataMember]
         public List<string> LimitIssuers { get; set; }
         [DataMember]
         public Dictionary<string,string> PromotionInfoIssuers { get; set; }
+
     }
 }
