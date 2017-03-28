@@ -22,7 +22,7 @@ namespace Goova.Plexo
         [DataMember]
         public int? AnonInstrumentUsageTimeLimit { get; set; }
         [DataMember]
-        public List<CreditLimit> CreditLimits { get; set; }
+        public List<AmountLimit> CreditLimits { get; set; }
         [DataMember]
         public List<TimeLimit> AdditionalRequirements { get; set; }
     }
