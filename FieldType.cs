@@ -14,6 +14,10 @@ namespace Goova.Plexo
         [EnumMember] Address,
         [EnumMember] ZipCode,
         [EnumMember] Email,
-        [EnumMember] AmountLimitExtension
+        [EnumMember] Phone,
+        [EnumMember] Cellphone,
+        [EnumMember] AmountLimitExtension,
+        [EnumMember] Birthdate
+
     }
 }
