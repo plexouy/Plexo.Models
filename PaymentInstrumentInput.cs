@@ -10,6 +10,8 @@ namespace Goova.Plexo
         public string InstrumentToken { get; set; }
         [DataMember]
         public Dictionary<FieldType,string> NonStorableItems { get; set; }
+        [DataMember]
+        public bool UseExtendedClientCreditIfAvailable { get; set; }
     }
 
 }

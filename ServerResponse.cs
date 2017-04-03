@@ -2,8 +2,6 @@
 
 namespace Goova.Plexo
 {
-
-
     [DataContract]
     public class ServerResponse<T> : ServerResponse
     {

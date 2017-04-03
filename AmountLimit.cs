@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Goova.Plexo
 {
     [DataContract]
-    public class CreditLimit
+    public class AmountLimit
     {
         [DataMember]
         public decimal Amount { get; set; }
@@ -12,6 +12,6 @@ namespace Goova.Plexo
         [DataMember]
         public Currency Currency { get; set; }
         [DataMember]
-        public bool SupportsExtendedCredit { get; set; }
+        public bool SupportsExtendedLimit { get; set; }
     }
 }

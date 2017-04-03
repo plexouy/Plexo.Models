@@ -48,7 +48,9 @@ namespace Goova.Plexo
         [EnumMember]
         ExternalLimitedCard,
         [EnumMember]
-        Forbidden
+        Forbidden,
+        [EnumMember]
+        InvalidVerification,
         //To Be Completed
     }
 }
