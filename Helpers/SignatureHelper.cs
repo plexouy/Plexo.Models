@@ -21,7 +21,7 @@ namespace Goova.Plexo.Helpers
             _cert = cert;
             _rsa = priv ? cert.GetRSAPrivateKey() : cert.GetRSAPublicKey();
         }
-        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.Local };
+        private JsonSerializerSettings serSettings = new JsonSerializerSettings { Formatting = Formatting.None, DateFormatHandling = DateFormatHandling.IsoDateFormat, DateTimeZoneHandling = DateTimeZoneHandling.Local , NullValueHandling = NullValueHandling.Ignore};
 
         public PublicKeyInfo GetPublicKey()
         {
@@ -32,10 +32,10 @@ namespace Goova.Plexo.Helpers
         }
         public TS Verify<T, TS>(T obj) where T : SignedObject<TS>
         {
-            string so = JsonConvert.SerializeObject(obj.Object, serSettings); //Canonicalize
+            string so = JsonConvert.SerializeObject(obj.Object, Formatting.None, serSettings); //Canonicalize
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
-            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, serSettings));
+            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, Formatting.None, serSettings));
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
                 throw new SignatureException("Signature do not match");
             if ((long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
@@ -44,10 +44,10 @@ namespace Goova.Plexo.Helpers
         }
         public void Verify<T>(T obj) where T : SignedObject
         {
-            string so = JsonConvert.SerializeObject(obj.Object, serSettings); //Canonicalize
+            string so = JsonConvert.SerializeObject(obj.Object, Formatting.None, serSettings); //Canonicalize
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
-            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, serSettings));
+            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, Formatting.None, serSettings));
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
                 throw new SignatureException("Signature do not match");
             if ((long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
@@ -61,10 +61,10 @@ namespace Goova.Plexo.Helpers
             t.Object.UTCUnixTimeExpiration = (long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds + DefaultExpirationTimeInSeconds;
             t.Object.Fingerprint = _cert.Thumbprint;
             t.Object.Object = obj;
-            string so = JsonConvert.SerializeObject(t.Object, serSettings); //Canonicalize
+            string so = JsonConvert.SerializeObject(t.Object, Formatting.None, serSettings); //Canonicalize
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
-            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, serSettings));
+            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, Formatting.None, serSettings));
             t.Signature = Convert.ToBase64String(_rsa.SignData(body, HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1));
             return t;
         }
