@@ -10,8 +10,7 @@ namespace Goova.Plexo
         [EnumMember]
         OAuth,
         [EnumMember]
-        Anonymous,
-        [EnumMember]
-        ExtendedCreditInstrumentToken
+        Anonymous
+
     }
 }

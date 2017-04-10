@@ -13,5 +13,9 @@ namespace Goova.Plexo
         RegisterInstrument = 2,
         [EnumMember]
         DeleteInstrument = 4,
+        [EnumMember]
+        SessionExtendAmount = 8,
+        [EnumMember]
+        ClientExtendAmount = 16
     }
 }

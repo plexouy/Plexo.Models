@@ -12,6 +12,7 @@ namespace Goova.Plexo
         [DataMember]
         public Currency Currency { get; set; }
         [DataMember]
+
         public bool SupportsExtendedLimit { get; set; }
     }
 }

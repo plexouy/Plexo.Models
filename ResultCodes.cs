@@ -11,6 +11,7 @@ namespace Goova.Plexo
         ArgumentError,
         [EnumMember]
         InvalidSession,
+
         [EnumMember]
         SessionExpired,
         [EnumMember]
@@ -51,6 +52,10 @@ namespace Goova.Plexo
         Forbidden,
         [EnumMember]
         InvalidVerification,
+        [EnumMember]
+        RequiresSessionExtendedAmount,
+        [EnumMember]
+        RequiresClientExtendedAmount
         //To Be Completed
     }
 }
