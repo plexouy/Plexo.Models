@@ -17,7 +17,8 @@ namespace Goova.Plexo
         [EnumMember] Phone,
         [EnumMember] Cellphone,
         [EnumMember] AmountLimitExtension,
-        [EnumMember] Birthdate
+        [EnumMember] Birthdate,
+        [EnumMember] InstrumentName
 
     }
 }
