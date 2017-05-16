@@ -7,8 +7,8 @@
     <ProjectGuid>{0FDDDBA6-B05F-4C41-B5EB-18F91E34E160}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Goova.Plexo</RootNamespace>
-    <AssemblyName>Goova.Plexo.Models</AssemblyName>
+    <RootNamespace>Plexo</RootNamespace>
+    <AssemblyName>Plexo.Models</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

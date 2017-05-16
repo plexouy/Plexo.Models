@@ -3,7 +3,7 @@ using System.ServiceModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Goova.Plexo.Helpers
+namespace Plexo.Helpers
 {
     public sealed class FlowingOperationContextScope : IDisposable
     {

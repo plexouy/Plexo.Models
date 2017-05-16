@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Goova.Plexo.Exceptions
+namespace Plexo.Exceptions
 {
     public class ResultCodeException : Exception
     {

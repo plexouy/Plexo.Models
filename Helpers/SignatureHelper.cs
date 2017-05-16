@@ -3,11 +3,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using Goova.Plexo.Exceptions;
+using Plexo.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Goova.Plexo.Helpers
+namespace Plexo.Helpers
 {
     public class SignatureHelper
     {

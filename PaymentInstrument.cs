@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Goova.Plexo
+namespace Plexo
 {
     [DataContract]
     public class PaymentInstrument

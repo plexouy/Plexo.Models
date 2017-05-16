@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 // ReSharper disable InconsistentNaming
 
-namespace Goova.Plexo
+namespace Plexo
 {
     [DataContract]
     public enum FieldType

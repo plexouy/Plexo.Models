@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace Goova.Plexo
+namespace Plexo
 {
     [DataContract]
     public class Currency

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goova.Plexo.Models", "Goova.Plexo.Models.csproj", "{0FDDDBA6-B05F-4C41-B5EB-18F91E34E160}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plexo.Models", "Plexo.Models.csproj", "{0FDDDBA6-B05F-4C41-B5EB-18F91E34E160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

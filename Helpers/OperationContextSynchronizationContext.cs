@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Goova.Plexo.Helpers
+namespace Plexo.Helpers
 {
     public class OperationContextSynchronizationContext : SynchronizationContext
     {
