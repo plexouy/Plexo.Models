@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>>$(SolutionDir)\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +60,7 @@
     <Compile Include="Exceptions\SignatureException.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
+    <Compile Include="IdentificationType.cs" />
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />
     <Compile Include="CancelRequest.cs" />

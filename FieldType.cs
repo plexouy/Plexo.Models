@@ -18,7 +18,8 @@ namespace Plexo
         [EnumMember] Cellphone,
         [EnumMember] AmountLimitExtension,
         [EnumMember] Birthdate,
-        [EnumMember] InstrumentName
-
+        [EnumMember] InstrumentName,
+        [EnumMember] IdentificationType,
+        [EnumMember] Identification,
     }
 }

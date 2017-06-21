@@ -35,9 +35,10 @@ namespace Plexo.Helpers
             string so = JsonConvert.SerializeObject(obj.Object, Formatting.None, serSettings); //Canonicalize
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
-            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, Formatting.None, serSettings));
+            string so2=JsonConvert.SerializeObject(normal, Formatting.None, serSettings);
+            byte[] body = Encoding.UTF8.GetBytes(so2);
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
-                throw new SignatureException("Signature do not match");
+                throw new SignatureException("Signature do not match: Sent:"+so+" Alpha: "+so2);
             if ((long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
                 throw new SignatureException("Object has expired");
             return obj.Object.Object;
@@ -47,9 +48,10 @@ namespace Plexo.Helpers
             string so = JsonConvert.SerializeObject(obj.Object, Formatting.None, serSettings); //Canonicalize
             var parsedObject = JObject.Parse(so);//Canonicalize
             var normal = SortPropertiesAlphabetically(parsedObject);//Canonicalize
-            byte[] body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(normal, Formatting.None, serSettings));
+            string so2 = JsonConvert.SerializeObject(normal, Formatting.None, serSettings);
+            byte[] body = Encoding.UTF8.GetBytes(so2);
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
-                throw new SignatureException("Signature do not match");
+                throw new SignatureException("Signature do not match: Sent:" + so + " Alpha: " + so2);
             if ((long)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
                 throw new SignatureException("Object has expired");
 

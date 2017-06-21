@@ -19,6 +19,8 @@ namespace Plexo
         [DataMember]
         public FinancialInclusion FinancialInclusion { get; set; }
         [DataMember]
+        public decimal? TipAmount { get; set; }
+        [DataMember]
         public string OptionalPointOfSale { get; set; }
         [DataMember]
         public string OptionalMetadata { get; set; }

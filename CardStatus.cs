@@ -13,6 +13,8 @@ namespace Plexo
         Expired,
         [EnumMember]
         Disabled,
+        [EnumMember]
+        WaitingForConfirmation
         
     }
 }
