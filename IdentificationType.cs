@@ -10,6 +10,10 @@ namespace Plexo
     {
         Identification,
         Passport,
-        Others
+        Others,
+        RUT
     }
+
+
+
 }
