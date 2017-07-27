@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Plexo.Helpers
 {
@@ -12,7 +8,9 @@ namespace Plexo.Helpers
     {
         private readonly OperationContext context;
 
-        public OperationContextSynchronizationContext(IClientChannel channel) : this(new OperationContext(channel)) { }
+        public OperationContextSynchronizationContext(IClientChannel channel) : this(new OperationContext(channel))
+        {
+        }
 
         public OperationContextSynchronizationContext(OperationContext context)
         {
@@ -42,6 +40,7 @@ namespace Plexo.Helpers
                 SynchronizationContext.SetSynchronizationContext(currentSynchronizationContext);
             }
         }
+
         public static T SyncContext<T>(this IClientChannel client, Func<T> a)
         {
             var currentSynchronizationContext = SynchronizationContext.Current;

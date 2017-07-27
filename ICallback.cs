@@ -9,7 +9,6 @@ namespace Plexo
     {
         [OperationContract]
         [WebInvoke(UriTemplate = "Instrument", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-
         Task<ClientResponse> Instrument(IntrumentCallback instrument);
     }
 }

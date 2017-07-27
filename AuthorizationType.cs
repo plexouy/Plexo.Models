@@ -11,6 +11,5 @@ namespace Plexo
         OAuth,
         [EnumMember]
         Anonymous
-
     }
 }

@@ -7,6 +7,5 @@ namespace Plexo
     {
         [DataMember]
         public string Client { get; set; }
-
     }
 }

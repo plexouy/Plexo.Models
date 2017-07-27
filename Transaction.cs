@@ -29,6 +29,5 @@ namespace Plexo
         public int TransactionCode { get; set; }
         [DataMember]
         public string TransactionResultText { get; set; }
-
     }
 }

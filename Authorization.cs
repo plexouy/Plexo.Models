@@ -9,7 +9,6 @@ namespace Plexo
         [DataMember]
         public ActionType Action { get; set; }
         [DataMember]
-
         public AuthorizationType Type { get; set; }
         [DataMember]
         public string MetaReference { get; set; }
@@ -25,6 +24,5 @@ namespace Plexo
         public Dictionary<string,string> PromotionInfoIssuers { get; set; }
         [DataMember]
         public string ExtendableInstrumentToken { get; set; }
-
     }
 }

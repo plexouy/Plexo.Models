@@ -23,6 +23,5 @@ namespace Plexo
         [OperationContract]
         [WebGet(UriTemplate = "Key/{fingerprint}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         Task<SignedServerResponse<PublicKeyInfo>> GetServerPublicKey(string fingerprint);
-
     }
 }

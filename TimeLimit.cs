@@ -8,7 +8,6 @@ namespace Plexo
         [DataMember]
         public int SecondsLeft;
         [DataMember]
-
         public FieldType RequirementAfterTimeLimit { get; set; }
     }
 }

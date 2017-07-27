@@ -7,6 +7,4 @@ namespace Plexo
 
     [DataContract]
     public class ClientSignedRequest : SignedObject<ClientRequest> { }
-
-
 }

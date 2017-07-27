@@ -18,7 +18,7 @@ namespace Plexo
         [DataMember]
         public CardStatus Status { get; set; }
         [DataMember]
-        public DateTime InstrumentExpiration { get; set; }
+        public long InstrumentExpirationUTC { get; set; }
         [DataMember]
         public int? AnonInstrumentUsageTimeLimit { get; set; }
         [DataMember]

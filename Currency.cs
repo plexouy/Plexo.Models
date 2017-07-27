@@ -13,7 +13,7 @@ namespace Plexo
         public string Plural { get; set; }
         [DataMember]
         public string Symbol { get; set; }
-
+        //Mercury Id is for internal use, no serialization required
         public int MercuryId { get; set; }
     }
 }

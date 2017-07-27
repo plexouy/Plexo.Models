@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.ServiceModel;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,10 +8,10 @@ namespace Plexo.Helpers
 {
     public sealed class FlowingOperationContextScope : IDisposable
     {
-        bool _inflight = false;
+        bool _inflight;
         bool _disposed;
-        OperationContext _thisContext = null;
-        OperationContext _originalContext = null;
+        OperationContext _thisContext;
+        OperationContext _originalContext;
 
         public FlowingOperationContextScope(IContextChannel channel) :
             this(new OperationContext(channel))
@@ -64,7 +65,7 @@ namespace Plexo.Helpers
 
         // awaiter
         public class SimpleAwaiter<TResult> :
-            System.Runtime.CompilerServices.INotifyCompletion
+            INotifyCompletion
         {
             readonly Task<TResult> _task;
 
@@ -94,7 +95,6 @@ namespace Plexo.Helpers
                     _beforeAwait();
                     return false;
                 }
-
             }
 
             public TResult GetResult()
@@ -106,15 +106,13 @@ namespace Plexo.Helpers
             public void OnCompleted(Action continuation)
             {
                 _task.ContinueWith(task =>
-                {
-                    _afterAwait();
-                    continuation();
-                },
-                CancellationToken.None,
-                TaskContinuationOptions.ExecuteSynchronously,
-                SynchronizationContext.Current != null ?
-                    TaskScheduler.FromCurrentSynchronizationContext() :
-                    TaskScheduler.Current);
+                    {
+                        _afterAwait();
+                        continuation();
+                    },
+                    CancellationToken.None,
+                    TaskContinuationOptions.ExecuteSynchronously,
+                    SynchronizationContext.Current != null ? TaskScheduler.FromCurrentSynchronizationContext() : TaskScheduler.Current);
             }
         }
     }

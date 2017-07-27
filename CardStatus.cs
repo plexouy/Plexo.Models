@@ -15,6 +15,5 @@ namespace Plexo
         Disabled,
         [EnumMember]
         WaitingForConfirmation
-        
     }
 }

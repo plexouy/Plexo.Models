@@ -11,7 +11,6 @@ namespace Plexo
         ArgumentError,
         [EnumMember]
         InvalidSession,
-
         [EnumMember]
         SessionExpired,
         [EnumMember]
