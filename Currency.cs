@@ -1,4 +1,5 @@
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace Plexo
 {
@@ -14,6 +15,7 @@ namespace Plexo
         [DataMember]
         public string Symbol { get; set; }
         //Mercury Id is for internal use, no serialization required
+        [JsonIgnore]
         public int MercuryId { get; set; }
     }
 }
