@@ -29,5 +29,8 @@ namespace Plexo
         public int TransactionCode { get; set; }
         [DataMember]
         public string TransactionResultText { get; set; }
+
+        [DataMember]
+        public long ExpirationUTC { get; set; } //Case Use, when TransactionCode=Pending, or when Opearation is StartReserve
     }
 }

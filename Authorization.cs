@@ -4,14 +4,10 @@ using System.Runtime.Serialization;
 namespace Plexo
 {
     [DataContract]
-    public class Authorization 
+    public class Authorization : AuthorizationInfo
     {
         [DataMember]
-        public ActionType Action { get; set; }
-        [DataMember]
-        public AuthorizationType Type { get; set; }
-        [DataMember]
-        public string MetaReference { get; set; }
+        public ActionType Action { get; set; }      
         [DataMember]
         public string RedirectUri { get; set; }
         [DataMember]
@@ -24,5 +20,8 @@ namespace Plexo
         public Dictionary<string,string> PromotionInfoIssuers { get; set; }
         [DataMember]
         public string ExtendableInstrumentToken { get; set; }
+
+        [DataMember]
+        public bool DoNotUseCallback { get; set; }
     }
 }

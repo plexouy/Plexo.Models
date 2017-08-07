@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Plexo
 {
@@ -8,6 +9,10 @@ namespace Plexo
         [DataMember]
         public string Id { get; set; }
         [DataMember]
+        public int IssuerId { get; set; }
+        [DataMember]
+        public int VariationId { get; set; }
+        [DataMember]
         public string Issuer { get; set; }
         [DataMember]
         public string Bank { get; set; }
@@ -15,5 +20,8 @@ namespace Plexo
         public string Variation { get; set; }
         [DataMember]
         public string ImageUrl { get; set; }
+
+        [DataMember]
+        public List<FieldInfo> Fields { get; set; }
     }
 }

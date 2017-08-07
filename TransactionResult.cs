@@ -10,6 +10,8 @@ namespace Plexo
         [EnumMember]
         Started = 1,
         [EnumMember]
+        Pending = 2,
+        [EnumMember]
         Denied = 10,
         [EnumMember]
         Expired = 20,

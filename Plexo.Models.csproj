@@ -49,21 +49,31 @@
   <ItemGroup>
     <Compile Include="ActionType.cs" />
     <Compile Include="Authorization.cs" />
+    <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="AuthorizationType.cs" />
     <Compile Include="ClientRequest.cs" />
     <Compile Include="ClientSignedResponse.cs" />
+    <Compile Include="Commerce.cs" />
+    <Compile Include="CommerceIdRequest.cs" />
+    <Compile Include="CommerceIssuerIdRequest.cs" />
+    <Compile Include="CommerceModifyRequest.cs" />
+    <Compile Include="CommerceRequest.cs" />
+    <Compile Include="DeleteInstrumentRequest.cs" />
     <Compile Include="Exceptions\CertificateException.cs" />
     <Compile Include="Exceptions\ConfigurationException.cs" />
     <Compile Include="Exceptions\FingerPrintException.cs" />
     <Compile Include="Exceptions\MessageExpiredException.cs" />
     <Compile Include="Exceptions\ResultCodeException.cs" />
     <Compile Include="Exceptions\SignatureException.cs" />
+    <Compile Include="FieldInfo.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
     <Compile Include="IdentificationType.cs" />
+    <Compile Include="InstrumentWithMetadata.cs" />
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />
-    <Compile Include="CancelRequest.cs" />
+    <Compile Include="IssuerData.cs" />
+    <Compile Include="Reference.cs" />
     <Compile Include="CardStatus.cs" />
     <Compile Include="ClientSignedRequest.cs" />
     <Compile Include="ClientResponse.cs" />
@@ -74,6 +84,9 @@
     <Compile Include="FinancialInclusionResult.cs" />
     <Compile Include="InclusionType.cs" />
     <Compile Include="IssuerInfo.cs" />
+    <Compile Include="ReferenceType.cs" />
+    <Compile Include="Reserve.cs" />
+    <Compile Include="ReserveRequest.cs" />
     <Compile Include="ResultCodes.cs" />
     <Compile Include="ICallback.cs" />
     <Compile Include="InfoLine.cs" />
@@ -90,10 +103,11 @@
     <Compile Include="Helpers\SignatureHelper.cs" />
     <Compile Include="ServerSignedRequest.cs" />
     <Compile Include="SignedObject.cs" />
-    <Compile Include="SignedServerResponse.cs" />
+    <Compile Include="ServerSignedResponse.cs" />
     <Compile Include="StateObject.cs" />
     <Compile Include="TimeLimit.cs" />
     <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionCallback.cs" />
     <Compile Include="TransactionResult.cs" />
   </ItemGroup>
   <ItemGroup>
