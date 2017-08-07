@@ -18,6 +18,8 @@ namespace Plexo
         [DataMember]
         public IssuerInfo Issuer { get; set; }
         [DataMember]
+        public string CommerceId { get; set; }
+        [DataMember]
         public decimal Amount { get; set; }
         [DataMember]
         public int CurrencyId { get; set; }
