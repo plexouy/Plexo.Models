@@ -102,6 +102,7 @@
     <Compile Include="ServerResponse.cs" />
     <Compile Include="Helpers\SignatureHelper.cs" />
     <Compile Include="ServerSignedRequest.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="SignedObject.cs" />
     <Compile Include="ServerSignedResponse.cs" />
     <Compile Include="StateObject.cs" />

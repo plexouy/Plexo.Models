@@ -54,7 +54,11 @@ namespace Plexo
         [EnumMember]
         RequiresSessionExtendedAmount,
         [EnumMember]
-        RequiresClientExtendedAmount
+        RequiresClientExtendedAmount,
+        [EnumMember]
+        AlreadyExists,
+        [EnumMember]
+        MissingFields
         //To Be Completed
     }
 }

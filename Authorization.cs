@@ -13,14 +13,13 @@ namespace Plexo
         [DataMember]
         public string OptionalMetadata { get; set; }
         [DataMember]
-        public Dictionary<string, object> ClientInformation { get; set; }
+        public Dictionary<FieldType, string> ClientInformation { get; set; }
         [DataMember]
         public List<string> LimitIssuers { get; set; }
         [DataMember]
         public Dictionary<string,string> PromotionInfoIssuers { get; set; }
         [DataMember]
         public string ExtendableInstrumentToken { get; set; }
-
         [DataMember]
         public bool DoNotUseCallback { get; set; }
     }

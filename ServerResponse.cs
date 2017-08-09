@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Plexo
 {
@@ -15,6 +16,8 @@ namespace Plexo
         public ResultCodes ResultCode { get; set; }
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
         public string ErrorMessage { get; set; }
+        [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        public Dictionary<string,string> I18NErrorMessages { get; set; }
     }
 
 }

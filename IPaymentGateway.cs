@@ -13,7 +13,7 @@ namespace Plexo
         
         [OperationContract]
         [WebInvoke(UriTemplate = "Auth", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerResponse<string>> Authorize(Authorization authorization);
+        Task<ServerResponse<Session>> Authorize(Authorization authorization);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Purchase", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
