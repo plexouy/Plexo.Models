@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Plexo
 {
@@ -8,31 +9,29 @@ namespace Plexo
         [DataMember]
         public string TransactionId { get; set; }
         [DataMember]
-        public string ReferenceId { get; set; }
+        public Commerce Commerce { get; set; }
         [DataMember]
-        public string Authorization { get; set; }
-        [DataMember]
-        public string Ticket { get; set; }
+        public string InstrumentToken { get; set; }
         [DataMember]
         public string InstrumentName { get; set; }
         [DataMember]
         public IssuerInfo Issuer { get; set; }
-        [DataMember]
-        public string CommerceId { get; set; }
-        [DataMember]
         public decimal Amount { get; set; }
         [DataMember]
-        public int CurrencyId { get; set; }
+        public int Installments { get; set; }
+        [DataMember]
+        public Currency Currency { get; set; }
+        [DataMember]
+        public bool IsAnonymous { get; set; }
+        [DataMember]
+        public TransactionType CurrentState { get; set; }
+        [DataMember]
+        public string InvoiceNumber { get; set; }
         [DataMember]
         public FinancialInclusionResult FinancialInclusion { get; set; }
         [DataMember]
-        public TransactionResult Status { get; set; }
+        public Dictionary<TransactionType, TransactionInfo> Transactions { get; set; }
         [DataMember]
-        public int TransactionCode { get; set; }
-        [DataMember]
-        public string TransactionResultText { get; set; }
-
-        [DataMember]
-        public long ExpirationUTC { get; set; } //Case Use, when TransactionCode=Pending, or when Opearation is StartReserve
+        public Dictionary<FieldType, string> FieldInformation { get; set; }
     }
 }

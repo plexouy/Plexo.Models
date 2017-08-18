@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace Plexo
@@ -24,6 +25,10 @@ namespace Plexo
         public List<AmountLimit> CreditLimits { get; set; }
         [DataMember]
         public List<TimeLimit> AdditionalRequirements { get; set; }
+        [DataMember]
+        public Dictionary<FieldType,string> InstrumentInformation { get; set; }
+        [DataMember]
+        public string SessionCreationId { get; set; }
     }
 
 

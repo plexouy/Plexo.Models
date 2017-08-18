@@ -2,9 +2,9 @@
 {
     public class CertificateException : ResultCodeException
     {
-        public CertificateException(string message) : base(message, ResultCodes.SystemError)
+        public CertificateException(params (string language, string message)[] errormessages) : base(ResultCodes.SystemError, errormessages)
         {
-            
+
         }
     }
 }

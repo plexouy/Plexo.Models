@@ -41,11 +41,11 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Instruments", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<List<InstrumentWithMetadata>>> GetInstruments(ClientSignedRequest<AuthorizationInfo> info);
+        Task<ServerSignedResponse<List<PaymentInstrument>>> GetInstruments(ClientSignedRequest<AuthorizationInfo> info);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Instruments/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse> DeleteInstruments(ClientSignedRequest<DeleteInstrumentRequest> info);
+        Task<ServerSignedResponse> DeleteInstrument(ClientSignedRequest<DeleteInstrumentRequest> info);
 
         #endregion
 

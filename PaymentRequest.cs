@@ -21,7 +21,7 @@ namespace Plexo
         [DataMember]
         public decimal? TipAmount { get; set; }
         [DataMember]
-        public string OptionalCommerceId { get; set; }
+        public int? OptionalCommerceId { get; set; }
         [DataMember]
         public string OptionalMetadata { get; set; }
     }

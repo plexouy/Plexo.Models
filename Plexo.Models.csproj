@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Plexo</RootNamespace>
     <AssemblyName>Plexo.Models</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -51,6 +51,7 @@
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="AuthorizationType.cs" />
+    <Compile Include="CancelRequest.cs" />
     <Compile Include="ClientRequest.cs" />
     <Compile Include="ClientSignedResponse.cs" />
     <Compile Include="Commerce.cs" />
@@ -59,9 +60,10 @@
     <Compile Include="CommerceModifyRequest.cs" />
     <Compile Include="CommerceRequest.cs" />
     <Compile Include="DeleteInstrumentRequest.cs" />
+    <Compile Include="Exceptions\ArgumentException.cs" />
     <Compile Include="Exceptions\CertificateException.cs" />
     <Compile Include="Exceptions\ConfigurationException.cs" />
-    <Compile Include="Exceptions\FingerPrintException.cs" />
+    <Compile Include="Exceptions\FingerprintException.cs" />
     <Compile Include="Exceptions\MessageExpiredException.cs" />
     <Compile Include="Exceptions\ResultCodeException.cs" />
     <Compile Include="Exceptions\SignatureException.cs" />
@@ -109,7 +111,9 @@
     <Compile Include="TimeLimit.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="TransactionCallback.cs" />
+    <Compile Include="TransactionInfo.cs" />
     <Compile Include="TransactionResult.cs" />
+    <Compile Include="TransactionType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

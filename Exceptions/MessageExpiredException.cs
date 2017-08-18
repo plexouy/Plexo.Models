@@ -2,9 +2,9 @@
 {
     public class MessageExpiredException : ResultCodeException
     {
-        
-        public MessageExpiredException(string message) : base(message, ResultCodes.MessageExpired)
+        public MessageExpiredException(params (string language, string message)[] errormessages) : base(ResultCodes.MessageExpired, errormessages)
         {
+
         }
     }
 }

@@ -2,9 +2,9 @@
 {
     public class ConfigurationException : ResultCodeException
     {
-        public ConfigurationException(string message) : base(message, ResultCodes.SystemError)
+        public ConfigurationException(params (string language, string message)[] errormessages) : base(ResultCodes.SystemError, errormessages)
         {
-            
+
         }
     }
 }

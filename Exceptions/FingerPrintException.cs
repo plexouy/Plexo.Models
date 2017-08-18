@@ -2,8 +2,9 @@
 {
     public class FingerprintException : ResultCodeException
     {
-        public FingerprintException(string message) : base(message, ResultCodes.InvalidFingerprint)
+        public FingerprintException(params (string language, string message)[] errormessages) : base(ResultCodes.InvalidFingerprint, errormessages)
         {
+
         }
     }
 }

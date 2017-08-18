@@ -2,8 +2,9 @@
 {
     public class SignatureException : ResultCodeException
     {
-        public SignatureException(string message) : base(message, ResultCodes.InvalidSignature)
+        public SignatureException(params (string language, string message)[] errormessages) : base(ResultCodes.InvalidSignature, errormessages)
         {
+
         }
     }
 }

@@ -8,6 +8,11 @@ namespace Plexo
         [EnumMember]
         PlexoTransactionId,
         [EnumMember]
-        ClientReferenceId
+        ClientPurchaseReferenceId,
+        [EnumMember]
+        ClientCancelReferenceId,
+        [EnumMember]
+        ClientReserveReferenceId
+
     }
 }
