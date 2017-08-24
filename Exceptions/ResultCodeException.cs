@@ -11,6 +11,7 @@ namespace Plexo.Exceptions
         public Dictionary<string, string> I18NErrorMessages { get; }
         public bool IsErrorLogged { get; set; } = false;
 
+        public Exception OriginalException { get; set; }
 
         public ResultCodeException(ResultCodes code, params (string language, string message)[] errormessages)
         {

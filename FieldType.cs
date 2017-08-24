@@ -29,9 +29,10 @@ namespace Plexo
 
         //User/Provider Related Information starts at 0x500 // User Flag + Provider Flag
 
-        [EnumMember] SistarBankPaymentMethod = 0x501,
+        [EnumMember] SistarBancPaymentMethod = 0x501,
         [EnumMember] RedPagosProductNumber = 0x502,
         [EnumMember] RedPagosUserEnabled = 0x503,
+
 
 
         //Commerce Related Information starts at 0x800
