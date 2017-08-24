@@ -3,7 +3,7 @@
 namespace Plexo
 {
     [DataContract]
-    public class IntrumentCallback : InstrumentWithMetadata
+    public class IntrumentCallback : InstrumentWithMetadata, IClientCallback
     {
         [DataMember]
         public string SessionId { get; set; }

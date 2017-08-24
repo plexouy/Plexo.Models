@@ -3,7 +3,7 @@
 namespace Plexo
 {
     [DataContract]
-    public class TransactionCallback : Transaction
+    public class TransactionCallback : Transaction, IClientCallback
     {
         [DataMember]
         public string Client { get; set; }

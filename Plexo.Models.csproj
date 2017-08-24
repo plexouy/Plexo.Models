@@ -70,6 +70,7 @@
     <Compile Include="FieldInfo.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
+    <Compile Include="IClientCallback.cs" />
     <Compile Include="IdentificationType.cs" />
     <Compile Include="InstrumentWithMetadata.cs" />
     <Compile Include="ISecureCallback.cs" />
