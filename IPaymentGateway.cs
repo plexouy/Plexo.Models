@@ -21,7 +21,7 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Cancel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerResponse<Transaction>> Cancel(Reference payment);
+        Task<ServerResponse<Transaction>> Cancel(CancelRequest payment);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/StartReserve", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
