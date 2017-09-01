@@ -60,7 +60,7 @@ namespace Plexo
         #region Commerces
 
         [OperationContract]
-        [WebGet(UriTemplate = "Commerce")]
+        [WebGet(UriTemplate = "Commerce", ResponseFormat = WebMessageFormat.Json)]
         Task<ServerResponse<List<Commerce>>> GetCommerces();
 
 
@@ -80,7 +80,7 @@ namespace Plexo
         Task<ServerResponse> SetDefaultCommerce(CommerceIdRequest commerce);
 
         [OperationContract]
-        [WebGet(UriTemplate = "Commerce/Issuer")]
+        [WebInvoke(UriTemplate = "Commerce/Issuer", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<List<IssuerData>>> GetCommerceIssuers(CommerceIdRequest commerce);
 
         [OperationContract]
