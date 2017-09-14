@@ -16,7 +16,11 @@ namespace Plexo.Exceptions
         public ResultCodeException(ResultCodes code, params (string language, string message)[] errormessages)
         {
             Code = code;
-            I18NErrorMessages = errormessages.ToDictionary(a => a.language, a => a.message);
+            I18NErrorMessages=new Dictionary<string, string>();
+            foreach ((string language, string message) in errormessages)
+            {
+                I18NErrorMessages[language] = message;
+            }
         }
         public ResultCodeException(ServerResponse resp)
         {

@@ -16,6 +16,7 @@ namespace Plexo
         public string InstrumentName { get; set; }
         [DataMember]
         public IssuerInfo Issuer { get; set; }
+        [DataMember]
         public decimal Amount { get; set; }
         [DataMember]
         public int Installments { get; set; }
