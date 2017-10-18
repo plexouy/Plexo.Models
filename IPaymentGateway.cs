@@ -47,6 +47,11 @@ namespace Plexo
         [WebInvoke(UriTemplate = "Instruments/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse> DeleteInstrument(DeleteInstrumentRequest info);
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Instruments/Bank", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<PaymentInstrument>> CreateBankInstrument(CreateBankInstrumentRequest request);
+
+
         #endregion
 
         #region Issuers
@@ -92,6 +97,16 @@ namespace Plexo
         Task<ServerResponse> DeleteIssuerCommerce(CommerceIssuerIdRequest commerce);
 
         #endregion
+        #region TransactionInfo
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Transactions", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<TransactionCursor>> ObtainTransactions(TransactionQuery query);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Transactions/CSV", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<string>> ObtainCSVTransactions(TransactionQuery query);
+
+        #endregion
     }
 }

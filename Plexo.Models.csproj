@@ -59,6 +59,7 @@
     <Compile Include="CommerceIssuerIdRequest.cs" />
     <Compile Include="CommerceModifyRequest.cs" />
     <Compile Include="CommerceRequest.cs" />
+    <Compile Include="CreateBankInstrumentRequest.cs" />
     <Compile Include="DeleteInstrumentRequest.cs" />
     <Compile Include="Exceptions\ArgumentException.cs" />
     <Compile Include="Exceptions\CertificateException.cs" />
@@ -112,7 +113,9 @@
     <Compile Include="TimeLimit.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="TransactionCallback.cs" />
+    <Compile Include="TransactionCursor.cs" />
     <Compile Include="TransactionInfo.cs" />
+    <Compile Include="TransactionQuery.cs" />
     <Compile Include="TransactionResult.cs" />
     <Compile Include="TransactionType.cs" />
   </ItemGroup>
