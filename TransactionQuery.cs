@@ -10,7 +10,7 @@ namespace Plexo
     public class TransactionQuery
     {
         [DataMember]
-        public List<ITransactionQuery> Queries { get; set; }
+        public List<Query> Queries { get; set; }
         [DataMember]
         public List<TransactionOrder> Order { get; set; }
         [DataMember]
@@ -46,56 +46,24 @@ namespace Plexo
         [EnumMember]
         None
     }
-    public interface ITransactionQuery
-    {
-        QueryOperation QueryOperator { get; }
-    }
-    [DataContract]
-    public class AndQuery : BaseQuery, ITransactionQuery
-    {
-        [DataMember]
-        public QueryOperation QueryOperator => QueryOperation.And;
-    }
-    [DataContract]
-    public class OrQuery : BaseQuery, ITransactionQuery
-    {
-        [DataMember]
-        public QueryOperation QueryOperator => QueryOperation.Or;
-    }
-    [DataContract]
-    public class OrSubQuery : SubQuery, ITransactionQuery
-    {
-        [DataMember]
-        public QueryOperation QueryOperator => QueryOperation.Or;
-    }
-    [DataContract]
-    public class AndSubQuery : SubQuery, ITransactionQuery
-    {
-        [DataMember]
-        public QueryOperation QueryOperator => QueryOperation.And;
-    }
-    [DataContract]
-    public class SubQuery 
-    {
-
-        [DataMember]
-        public List<ITransactionQuery> Queries { get; set; }
-
-    }
 
     [DataContract]
-    public class BaseQuery
+    public class Query
     {
-
+        [DataMember]
+        public QueryOperation QueryOperator { get; }
         [DataMember]
         public TransactionField Field { get; set; }
         [DataMember]
         public TransactionOperator Operator { get; set; }
         [DataMember]
         public string Value { get; set; }
-
-
+        [DataMember]
+        public List<Query> SubQueries { get; set; }
     }
+
+
+
     [DataContract]
     public enum TransactionOperator
     {
