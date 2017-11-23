@@ -24,6 +24,8 @@ namespace Plexo
         [EnumMember]
         ExtendedCreditVerificationRequired=100,
         [EnumMember]
+        BadArgument=998,
+        [EnumMember]
         SystemError = 999 //To Be Completed
     }
 }
