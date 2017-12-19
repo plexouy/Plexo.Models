@@ -52,6 +52,7 @@
     <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="AuthorizationType.cs" />
     <Compile Include="CancelRequest.cs" />
+    <Compile Include="CardTypes.cs" />
     <Compile Include="ClientRequest.cs" />
     <Compile Include="ClientSignedResponse.cs" />
     <Compile Include="Commerce.cs" />

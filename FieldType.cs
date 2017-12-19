@@ -24,7 +24,6 @@ namespace Plexo
         FirstName,
         LastName,
         City,
-
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
 
@@ -32,12 +31,19 @@ namespace Plexo
         SistarBancPaymentMethod = 0x501,
         RedPagosProductNumber = 0x502,
         RedPagosUserEnabled = 0x503,
+        VisaNetUserId = 0x504,
+        CardType = 0x505,
+        CardIssuer = 0x506,
+        CybersourceDeviceFingerprint=0x507,
+        ClientIP=0x508,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)
         OcaTaxiCode = 0x802,
         TerminalNumber = 0x803,
         PosNumber = 0x804,
+        ProviderMerchantId = 0x805,
+        ProviderBranchNumber = 0x806,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
