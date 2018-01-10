@@ -16,6 +16,8 @@ namespace Plexo
         [EnumMember]
         SessionExtendAmount = 8,
         [EnumMember]
-        ClientExtendAmount = 16
+        ClientExtendAmount = 16,
+        [EnumMember]
+        AskForTemporaryItems=32
     }
 }
