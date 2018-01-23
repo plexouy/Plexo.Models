@@ -25,7 +25,11 @@ namespace Plexo.Exceptions
         public ResultCodeException(ServerResponse resp)
         {
             Code = resp.ResultCode;
-            I18NErrorMessages = resp.I18NErrorMessages;
+            if (resp.I18NErrorMessages == null && resp.ErrorMessage != null)
+                I18NErrorMessages = new Dictionary<string, string>() { { "es", resp.ErrorMessage }, { "en", resp.ErrorMessage } };
+            else
+                I18NErrorMessages = resp.I18NErrorMessages;
+
         }
     }
 }
