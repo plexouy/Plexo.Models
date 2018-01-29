@@ -21,6 +21,8 @@ namespace Plexo
         [EnumMember]
         Credit=4,
         [EnumMember]
-        Prepaid=6
+        Prepaid=6,
+        [EnumMember]
+        Unknown=0
     }
 }
