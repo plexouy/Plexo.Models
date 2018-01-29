@@ -8,21 +8,13 @@ using System.Threading.Tasks;
 namespace Plexo
 {
     [DataContract]
-    public enum CardTypes
+    public enum CodeAction
     {
         [EnumMember]
-        UruguayDebit=1,
+        Find,
         [EnumMember]
-        UruguayCredit=2,
+        Pay,
         [EnumMember]
-        UruguayPrepaid=5,
-        [EnumMember]
-        Debit=3,
-        [EnumMember]
-        Credit=4,
-        [EnumMember]
-        Prepaid=6,
-        [EnumMember]
-        Unknown=0
+        Cancel
     }
 }

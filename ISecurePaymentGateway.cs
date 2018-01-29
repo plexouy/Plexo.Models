@@ -117,5 +117,14 @@ namespace Plexo
         Task<ServerSignedResponse<PublicKeyInfo>> GetServerPublicKey(string fingerprint);
 
         #endregion
+
+        #region VerificationCodes
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Code", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<Transaction>> CodeAction(ClientSignedRequest<CodeRequest> request);
+
+        #endregion
+
     }
 }

@@ -97,6 +97,7 @@ namespace Plexo
         Task<ServerResponse> DeleteIssuerCommerce(CommerceIssuerIdRequest commerce);
 
         #endregion
+        
         #region TransactionInfo
 
         [OperationContract]
@@ -106,6 +107,14 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Transactions/CSV", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<string>> ObtainCSVTransactions(TransactionQuery query);
+
+        #endregion
+
+        #region VerificationCodes
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Code", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<Transaction>> CodeAction(CodeRequest request);
 
         #endregion
     }
