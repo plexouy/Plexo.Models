@@ -55,6 +55,8 @@
     <Compile Include="CardTypes.cs" />
     <Compile Include="ClientRequest.cs" />
     <Compile Include="ClientSignedResponse.cs" />
+    <Compile Include="CodeAction.cs" />
+    <Compile Include="CodeRequest.cs" />
     <Compile Include="Commerce.cs" />
     <Compile Include="CommerceIdRequest.cs" />
     <Compile Include="CommerceIssuerIdRequest.cs" />
