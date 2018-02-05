@@ -122,7 +122,7 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Code", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<Transaction>> CodeAction(ClientSignedRequest<CodeRequest> request);
+        Task<ServerSignedResponse<Transaction>> CodeAction(IssuerSignedRequest<CodeRequest> request);
 
         #endregion
 

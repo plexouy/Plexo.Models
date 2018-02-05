@@ -80,6 +80,8 @@
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />
     <Compile Include="IssuerData.cs" />
+    <Compile Include="IssuerRequest.cs" />
+    <Compile Include="IssuerSignedRequest.cs" />
     <Compile Include="Reference.cs" />
     <Compile Include="CardStatus.cs" />
     <Compile Include="ClientSignedRequest.cs" />

@@ -11,10 +11,23 @@ namespace Plexo
     public enum CodeAction
     {
         [EnumMember]
-        Find,
+        Query,
         [EnumMember]
         Pay,
         [EnumMember]
-        Cancel
+        Deny,
+        [EnumMember]
+        EndCancelation
+    }
+
+    [DataContract]
+    public class PaymentCode
+    {
+        [DataMember]
+        public string Code { get; set; }
+        [DataMember]
+        public string Url { get; set; }
+        [DataMember]
+        public long UTCUnixTimeExpiration { get; set; }
     }
 }

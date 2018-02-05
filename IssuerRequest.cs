@@ -3,17 +3,15 @@
 namespace Plexo
 {
     [DataContract]
-    public class ClientRequest<T> : ClientRequest
+    public class IssuerRequest<T> : IssuerRequest
     {
         [DataMember]
         public T Request { get; set; }
     }
     [DataContract]
-    public class ClientRequest
+    public class IssuerRequest
     {
         [DataMember]
-        public string Client { get; set; }
+        public string Issuer { get; set; }
     }
-
-
 }

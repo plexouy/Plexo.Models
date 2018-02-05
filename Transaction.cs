@@ -34,5 +34,9 @@ namespace Plexo
         public Dictionary<TransactionType, TransactionInfo> Transactions { get; set; }
         [DataMember]
         public Dictionary<FieldType, string> FieldInformation { get; set; }
+        [DataMember]
+        public bool IsAsyncPayment { get; set; }
+        [DataMember]
+        public PaymentCode PaymentCode { get; set; }
     }
 }

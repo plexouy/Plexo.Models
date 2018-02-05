@@ -36,6 +36,7 @@ namespace Plexo
         CardIssuer = 0x506,
         CybersourceDeviceFingerprint=0x507,
         ClientIP=0x508,
+        IntegerId=0x509,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)
