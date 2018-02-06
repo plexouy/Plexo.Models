@@ -58,7 +58,9 @@ namespace Plexo
         [EnumMember]
         AlreadyExists,
         [EnumMember]
-        MissingFields
+        MissingFields,
+        [EnumMember]
+        CodeExpired
         //To Be Completed
     }
 }
