@@ -38,5 +38,7 @@ namespace Plexo
         public bool IsAsyncPayment { get; set; }
         [DataMember]
         public PaymentCode PaymentCode { get; set; }
+        [DataMember]
+        public long UTCUnixTimeExpiration { get; set; }
     }
 }

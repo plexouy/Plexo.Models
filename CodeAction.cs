@@ -27,7 +27,6 @@ namespace Plexo
         public string Code { get; set; }
         [DataMember]
         public string Url { get; set; }
-        [DataMember]
-        public long UTCUnixTimeExpiration { get; set; }
+
     }
 }
