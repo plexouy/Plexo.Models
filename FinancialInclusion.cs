@@ -13,5 +13,7 @@ namespace Plexo
         public decimal BilledAmount { get; set; }
         [DataMember]
         public int InvoiceNumber { get; set; }
+        [DataMember]
+        public string InvoiceNumberStr { get; set; }
     }
 }
