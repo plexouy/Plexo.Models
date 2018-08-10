@@ -12,7 +12,8 @@ namespace Plexo
         [EnumMember]
         ClientCancelReferenceId,
         [EnumMember]
-        ClientReserveReferenceId
-
+        ClientReserveReferenceId,
+        [EnumMember]
+        ClientRefundReferenceId,
     }
 }

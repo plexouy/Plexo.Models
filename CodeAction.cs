@@ -17,7 +17,9 @@ namespace Plexo
         [EnumMember]
         Deny,
         [EnumMember]
-        EndCancelation
+        EndCancelation,
+        [EnumMember]
+        Void
     }
 
     [DataContract]

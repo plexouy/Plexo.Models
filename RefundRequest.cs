@@ -3,12 +3,13 @@ using System.Runtime.Serialization;
 namespace Plexo
 {
     [DataContract]
-    public class CancelRequest : Reference
+    public class RefundRequest : Reference
     {
         [DataMember]
         public string ClientReferenceId { get; set; }
 
         [DataMember]
-        public int? OptionalClientId { get; set; }
+        public FinancialInclusion FinancialInclusion { get; set; }
+
     }
 }

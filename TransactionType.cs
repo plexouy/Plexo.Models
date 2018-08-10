@@ -10,6 +10,8 @@ namespace Plexo
         [EnumMember]
         Purchase,
         [EnumMember]
-        Cancel
+        Cancel,
+        [EnumMember]
+        Refund
     }
 }

@@ -94,6 +94,7 @@
     <Compile Include="InclusionType.cs" />
     <Compile Include="IssuerInfo.cs" />
     <Compile Include="ReferenceType.cs" />
+    <Compile Include="RefundRequest.cs" />
     <Compile Include="Reserve.cs" />
     <Compile Include="ReserveRequest.cs" />
     <Compile Include="ResultCodes.cs" />
