@@ -6,10 +6,13 @@ namespace Plexo
         public class Check
         {
             [DataMember]
+            public string Id { get; set; }
+
+            [DataMember]
             public string Uri { get; set; }
 
             [DataMember]
-            public EnrollmentInfo EnrollmentInfo { get; set; }
+            public string EnrollmentStatus { get; set; }
         }
 }
 

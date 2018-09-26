@@ -41,8 +41,24 @@ namespace Plexo
         Task<ServerSignedResponse<Transaction>> Status(ClientSignedRequest<Reference> payment);
 
         [OperationContract]
-        [WebInvoke(UriTemplate = "Check", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        [WebInvoke(UriTemplate = "VerifiedByVisa/Check", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Check>> Check(ClientSignedRequest<CheckRequest> check);
+        #endregion
+
+        #region Blacklist
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist/Add", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse> BlackListAdd(ClientSignedRequest<BlacklistRequest> request);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse> BlackListDelete(ClientSignedRequest<BlacklistRequest> request);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<List<BlacklistRequest>>> GetBlackList(ClientSignedRequest request);
+        
         #endregion
 
         #region Instruments

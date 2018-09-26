@@ -48,11 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionType.cs" />
+    <Compile Include="BlackListRequest.cs" />
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="AuthorizationType.cs" />
     <Compile Include="CancelRequest.cs" />
     <Compile Include="CardTypes.cs" />
+    <Compile Include="Check.cs" />
+    <Compile Include="CheckInfo.cs" />
+    <Compile Include="CheckRequest.cs" />
     <Compile Include="ClientRequest.cs" />
     <Compile Include="ClientSignedResponse.cs" />
     <Compile Include="CodeAction.cs" />
@@ -63,7 +67,9 @@
     <Compile Include="CommerceModifyRequest.cs" />
     <Compile Include="CommerceRequest.cs" />
     <Compile Include="CreateBankInstrumentRequest.cs" />
+    <Compile Include="CybersourceQueries.cs" />
     <Compile Include="DeleteInstrumentRequest.cs" />
+    <Compile Include="EnrollmentInfo.cs" />
     <Compile Include="Exceptions\ArgumentException.cs" />
     <Compile Include="Exceptions\CertificateException.cs" />
     <Compile Include="Exceptions\ConfigurationException.cs" />

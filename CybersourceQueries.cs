@@ -25,5 +25,13 @@ namespace Plexo
         public int CurrencyId { get; set; }
         public string Decision { get; set; }
         public int ReasonCode { get; set; }
+        public long RequestTime { get; set; }
+        public string AccountNumber { get; set; }
+        public string CardType { get; set; }
+        public string ExpirationMonth { get; set; }
+        public string ExpirationYear { get; set; }
+        public string CvNumber { get; set; }
+        public string Client { get; set; }    
+        public string RedirectUrl { get; set; }        
     }
 }

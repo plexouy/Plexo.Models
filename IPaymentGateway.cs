@@ -39,10 +39,13 @@ namespace Plexo
         [WebInvoke(UriTemplate = "Operation/Status", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<Transaction>> Status(Reference payment);
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "VerifiedByVisa/Check", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<Check>> Check(CheckRequest authorization);
         #endregion
 
         #region Instruments
-        
+
         [OperationContract]
         [WebInvoke(UriTemplate = "Instruments", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<List<PaymentInstrument>>> GetInstruments(AuthorizationInfo info);
@@ -101,7 +104,21 @@ namespace Plexo
         Task<ServerResponse> DeleteIssuerCommerce(CommerceIssuerIdRequest commerce);
 
         #endregion
-        
+
+        #region Blacklist
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist/Add", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse> BlackListAdd(BlacklistRequest request);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse> BlackListDelete(BlacklistRequest request);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Blacklist", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<List<BlacklistRequest>>> GetBlackList();
+        #endregion
+
         #region TransactionInfo
 
         [OperationContract]
