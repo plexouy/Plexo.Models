@@ -9,7 +9,7 @@ namespace Plexo
         public string ClientReferenceId { get; set; }
 
         [DataMember]
-        public FinancialInclusion FinancialInclusion { get; set; }
+        public decimal Amount { get; set; }
 
     }
 }
