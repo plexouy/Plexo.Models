@@ -56,5 +56,11 @@ namespace Plexo
         //Non Storable Secure Information 0x80;
         Pin = 0x8181,
         CVC = 0x8182,
+
+        //Cybersource
+        AuthServiceCommerceIndicator = 0x901,
+        AuthServiceXid = 0x902,
+        AuthServiceEciRaw = 0x903,
+        AuthServiceCavv = 0x904,
     }
 }
