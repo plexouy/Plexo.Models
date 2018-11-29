@@ -119,6 +119,12 @@ namespace Plexo
         [WebInvoke(UriTemplate = "Commerce/Issuer/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse> DeleteIssuerCommerce(ClientSignedRequest<CommerceIssuerIdRequest> commerce);
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Commerce/GetProvidedCodeCommerce", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<Commerce>> GetProvidedCodeCommerce(ClientSignedRequest<CommerceRequest> commerce);
+
+
+
 
         #endregion
 

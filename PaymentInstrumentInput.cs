@@ -12,6 +12,8 @@ namespace Plexo
         public Dictionary<FieldType,string> NonStorableItems { get; set; }
         [DataMember]
         public bool UseExtendedClientCreditIfAvailable { get; set; }
+        [DataMember]
+        public Dictionary<FieldType, string> OptionalInstrumentFields { get; set; }
     }
 
 }
