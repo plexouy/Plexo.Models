@@ -10,5 +10,8 @@ namespace Plexo
 
         [DataMember]
         public CodeAction Action { get; set; }
+
+        [DataMember]
+        public string IssuerReferenceId { get; set; }
     }
 }
