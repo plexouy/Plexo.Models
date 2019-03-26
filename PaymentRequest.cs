@@ -26,5 +26,7 @@ namespace Plexo
         public string OptionalMetadata { get; set; }
         [DataMember]
         public string OptionalProvidedCode { get; set; }
+        [DataMember]
+        public string OptionalExternalPaymentInfo { get; set; }
     }
 }
