@@ -59,11 +59,7 @@ namespace Plexo
         ProviderMerchantId = 0x805,
         ProviderBranchNumber = 0x806,
         CommerceReserveExpirationInSeconds=0x807,
-        PromotionalCode = 0x808,
-        CommerceReferenceId = 0x809,
-        TransactionDateTime = 0x810,
-        DeferredMonths = 0x811,
-        Plan = 0x812,
+
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
