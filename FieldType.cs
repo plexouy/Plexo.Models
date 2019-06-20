@@ -18,12 +18,25 @@ namespace Plexo
         Birthdate,
         InstrumentName,
         Identification,
-        IdentificationType,                           // 0 - CI , 1 - Pasaport, 3 Otros
-        IdentificationTypeExtended,                   // 0 - CI , 1 - Pasaport, 3 Otros, 4 RUT
+        IdentificationType,                           // 0 - CI , 1 - Pasaport, 2 Otros, 3 RUT
+        IdentificationTypeExtended,                   // 0 - CI , 1 - Pasaport, 2 Otros, 3 RUT
         AccountNumber,                                //Bank Account Number
         FirstName,
         LastName,
         City,
+
+        //New OptionalFields
+        Country = 0x0201,
+        ShippingAddress,
+        ShippingZipCode,
+        ShippingCity,
+        ShippingCountry,
+        PromotionalCode,
+        CommerceReferenceId,
+        TransactionDateTime,
+        DeferredMonths,
+        Plan,
+
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
 
@@ -46,6 +59,11 @@ namespace Plexo
         ProviderMerchantId = 0x805,
         ProviderBranchNumber = 0x806,
         CommerceReserveExpirationInSeconds=0x807,
+        PromotionalCode = 0x808,
+        CommerceReferenceId = 0x809,
+        TransactionDateTime = 0x810,
+        DeferredMonths = 0x811,
+        Plan = 0x812,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
