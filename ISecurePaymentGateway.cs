@@ -39,10 +39,6 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Status", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Transaction>> Status(ClientSignedRequest<Reference> payment);
-
-        [OperationContract]
-        [WebInvoke(UriTemplate = "VerifiedByVisa/Check", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<Check>> Check(ClientSignedRequest<CheckRequest> check);
         #endregion
 
         #region Blacklist
