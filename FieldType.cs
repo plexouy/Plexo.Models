@@ -36,6 +36,7 @@ namespace Plexo
         TransactionDateTime,
         DeferredMonths,
         Plan,
+        RecurringPayment,
 
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
@@ -50,6 +51,7 @@ namespace Plexo
         CybersourceDeviceFingerprint=0x507,
         ClientIP=0x508,
         IntegerId=0x509,
+        RefundIntegerId = 0x510,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)
