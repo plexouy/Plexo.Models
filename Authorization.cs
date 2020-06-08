@@ -21,6 +21,6 @@ namespace Plexo
         [DataMember]
         public string ExtendableInstrumentToken { get; set; }
         [DataMember]
-        public bool DoNotUseCallback { get; set; }
+        public bool? DoNotUseCallback { get; set; }
     }
 }

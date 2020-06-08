@@ -42,7 +42,7 @@ namespace Plexo.Helpers
             string so2 = JsonConvert.SerializeObject(normal, Formatting.None, serSettings);
             byte[] body = Encoding.UTF8.GetBytes(so2);
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
-                throw new SignatureException(("en",$"Signature do not match: Recv by Server: {so} Canonicalized by Server: {so2}"), ("es", $"La firma no concuerda: Recibido por el Servidor: {so} Canonicalizado por el Servidor: {so2}"));
+                throw new SignatureException(("en", $"Signature do not match: Message expected: {so2}"), ("es", $"La firma no concuerda: Mensaje esperado: {so2}"));
             if ((long) DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
                 throw new SignatureException(("en", "Object has expired"), ("es", "El objecto ha expirado"));
             return obj.Object.Object;
@@ -56,7 +56,7 @@ namespace Plexo.Helpers
             string so2 = JsonConvert.SerializeObject(normal, Formatting.None, serSettings);
             byte[] body = Encoding.UTF8.GetBytes(so2);
             if (!_rsa.VerifyData(body, Convert.FromBase64String(obj.Signature), HashAlgorithmName.SHA512, RSASignaturePadding.Pkcs1))
-                throw new SignatureException(("en", $"Signature do not match: Recv by Server: {so} Canonicalized by Server: {so2}"), ("es", $"La firma no concuerda: Recibido por el Servidor: {so} Canonicalizado por el Servidor: {so2}"));
+                throw new SignatureException(("en", $"Signature do not match: Message expected: {so2}"), ("es", $"La firma no concuerda: Mensaje esperado: {so2}"));
             if ((long) DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds > obj.Object.UTCUnixTimeExpiration)
                 throw new SignatureException(("en", "Object has expired"), ("es", "El objecto ha expirado"));
         }
