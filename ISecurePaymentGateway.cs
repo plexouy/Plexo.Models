@@ -27,7 +27,6 @@ namespace Plexo
         [WebInvoke(UriTemplate = "Operation/Refund", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Transaction>> Refund(ClientSignedRequest<RefundRequest> payment);
 
-
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/StartReserve", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Transaction>> StartReserve(ClientSignedRequest<ReserveRequest> payment);
@@ -54,7 +53,7 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Blacklist", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<List<BlacklistRequest>>> GetBlackList(ClientSignedRequest request);
-        
+
         #endregion
 
         #region Instruments
@@ -98,6 +97,7 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse> DeleteCommerce(ClientSignedRequest<CommerceIdRequest> commerce);
+
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/SetDefault", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse> SetDefaultCommerce(ClientSignedRequest<CommerceIdRequest> commerce);
@@ -118,8 +118,6 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/GetProvidedCodeCommerce", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Commerce>> GetProvidedCodeCommerce(ClientSignedRequest<CommerceRequest> commerce);
-
-
 
 
         #endregion

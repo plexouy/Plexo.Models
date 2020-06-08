@@ -38,10 +38,6 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Status", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<Transaction>> Status(Reference payment);
-
-        [OperationContract]
-        [WebInvoke(UriTemplate = "VerifiedByVisa/Check", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerResponse<Check>> Check(CheckRequest authorization);
         #endregion
 
         #region Instruments
@@ -87,6 +83,7 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse> DeleteCommerce(CommerceIdRequest commerce);
+
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/SetDefault", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse> SetDefaultCommerce(CommerceIdRequest commerce);
@@ -102,6 +99,10 @@ namespace Plexo
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/Issuer/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse> DeleteIssuerCommerce(CommerceIssuerIdRequest commerce);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "Commerce/GetProvidedCodeCommerce", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerResponse<Commerce>> GetProvidedCodeCommerce(CommerceRequest commerce);
 
         #endregion
 
