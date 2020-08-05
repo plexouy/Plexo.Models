@@ -61,6 +61,7 @@ namespace Plexo
         ProviderMerchantId = 0x805,
         ProviderBranchNumber = 0x806,
         CommerceReserveExpirationInSeconds=0x807,
+        SoftDescriptor = 0x808,
 
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
