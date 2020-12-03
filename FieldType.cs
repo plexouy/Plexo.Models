@@ -37,6 +37,8 @@ namespace Plexo
         DeferredMonths,
         Plan,
         RecurringPayment,
+        IssuerId,
+        PaymentLink,
 
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
@@ -52,6 +54,7 @@ namespace Plexo
         ClientIP=0x508,
         IntegerId=0x509,
         RefundIntegerId = 0x510,
+        ReserveIntegerId = 0x511,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)
@@ -62,7 +65,15 @@ namespace Plexo
         ProviderBranchNumber = 0x806,
         CommerceReserveExpirationInSeconds=0x807,
         SoftDescriptor = 0x808,
-
+        MCC,
+        CommerceCountry,
+        CommerceCity,
+        CommerceRUT,
+        SubCommerceAddress,
+        AggregatorId,   //PaymentFacilitator 
+        SubmerchantId,  //PaymentFacilitator 
+        PaymentFacilitatorId,
+        PaymentFacilitatorCommerceId,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
