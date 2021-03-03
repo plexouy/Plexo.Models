@@ -24,6 +24,7 @@ namespace Plexo
         FirstName,
         LastName,
         City,
+        State,
 
         //New OptionalFields
         Country = 0x0201,
@@ -39,6 +40,11 @@ namespace Plexo
         RecurringPayment,
         IssuerId,
         PaymentLink,
+        ShippingFirstName,
+        ShippingLastName,
+        ShippingPhoneNumber,
+
+
 
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
@@ -50,21 +56,21 @@ namespace Plexo
         VisaNetUserId = 0x504,
         CardType = 0x505,
         CardIssuer = 0x506,
-        CybersourceDeviceFingerprint=0x507,
-        ClientIP=0x508,
-        IntegerId=0x509,
+        CybersourceDeviceFingerprint = 0x507,
+        ClientIP = 0x508,
+        IntegerId = 0x509,
         RefundIntegerId = 0x510,
         ReserveIntegerId = 0x511,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)
-        OcaTaxiCode = 0x802,
-        TerminalNumber = 0x803,
-        PosNumber = 0x804,
-        ProviderMerchantId = 0x805,
-        ProviderBranchNumber = 0x806,
-        CommerceReserveExpirationInSeconds=0x807,
-        SoftDescriptor = 0x808,
+        OcaTaxiCode,
+        TerminalNumber,
+        PosNumber,
+        ProviderMerchantId,
+        ProviderBranchNumber,
+        CommerceReserveExpirationInSeconds,
+        SoftDescriptor,
         MCC,
         CommerceCountry,
         CommerceCity,
@@ -74,6 +80,9 @@ namespace Plexo
         SubmerchantId,  //PaymentFacilitator 
         PaymentFacilitatorId,
         PaymentFacilitatorCommerceId,
+        PaymentFacilitatorIntegratorId,
+        AvailableBanks,
+
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information

@@ -78,6 +78,7 @@
     <Compile Include="Exceptions\ResultCodeException.cs" />
     <Compile Include="Exceptions\SignatureException.cs" />
     <Compile Include="ExpressCheckoutRequest.cs" />
+    <Compile Include="ExpressCheckoutResult.cs" />
     <Compile Include="FieldInfo.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
