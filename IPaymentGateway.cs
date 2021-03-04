@@ -21,7 +21,7 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "ExpressCheckout", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<Session>> ExpressCheckout(ClientSignedRequest<ExpressCheckoutRequest> expressCheckout);
+        Task<ServerResponse<Session>> ExpressCheckout(ExpressCheckoutRequest expressCheckout);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Cancel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
