@@ -20,8 +20,8 @@ namespace Plexo
         Task<ServerResponse<Transaction>> Purchase(PaymentRequest payment);
 
         [OperationContract]
-        [WebInvoke(UriTemplate = "Operation/ExpressCheckout", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerResponse<Transaction>> ExpressCheckout(ExpressCheckoutRequest expressCheckout);
+        [WebInvoke(UriTemplate = "ExpressCheckout", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<Session>> ExpressCheckout(ClientSignedRequest<ExpressCheckoutRequest> expressCheckout);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Cancel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
