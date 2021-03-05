@@ -23,6 +23,8 @@ namespace Plexo
         [EnumMember]
         Prepaid=6,
         [EnumMember]
-        Unknown=0
+        Unknown=0,
+        [EnumMember]
+        Bank = 8
     }
 }

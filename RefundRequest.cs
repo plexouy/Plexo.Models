@@ -11,5 +11,7 @@ namespace Plexo
         [DataMember]
         public decimal Amount { get; set; }
 
+        [DataMember]
+        public int? OptionalClientId { get; set; }
     }
 }
