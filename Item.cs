@@ -9,6 +9,12 @@ namespace Plexo
         [DataMember]
         public string ClientItemReferenceId { get; set; }
         [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string Description { get; set; }
+        [DataMember]
+        public int? Quantity { get; set; }
+        [DataMember]
         public decimal Amount { get; set; }
         [DataMember]
         public List<InfoLine> InfoLines { get; set; }
