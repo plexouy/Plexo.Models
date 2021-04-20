@@ -84,7 +84,7 @@
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
     <Compile Include="IClientCallback.cs" />
     <Compile Include="IdentificationType.cs" />
-    <Compile Include="InstrumentStatus.cs" />
+    <Compile Include="InstrumentStatusEnum.cs" />
     <Compile Include="InstrumentWithMetadata.cs" />
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />

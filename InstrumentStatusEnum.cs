@@ -8,12 +8,18 @@ using System.Threading.Tasks;
 namespace Plexo
 {
     [DataContract]
-    public enum InstrumentStatus
+    public enum InstrumentStatusEnum
     {
         [EnumMember]
         Created,
         [EnumMember]
-        Updated,
+        WarningExpirationInLessThanOneMonth,
+        [EnumMember]
+        Expired,
+        [EnumMember]
+        Disabled,
+        [EnumMember]
+        WaitingForConfirmation,
         [EnumMember]
         Deleted
     }
