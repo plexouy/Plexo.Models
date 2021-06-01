@@ -82,6 +82,7 @@ namespace Plexo
         PaymentFacilitatorCommerceId,
         PaymentFacilitatorIntegratorId,
         AvailableBanks,
+        CommerceIssuerInstallments,
 
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
