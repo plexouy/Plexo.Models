@@ -28,5 +28,7 @@ namespace Plexo
         public string OptionalProvidedCode { get; set; }
         [DataMember]
         public string OptionalExternalPaymentInfo { get; set; }
+        [DataMember]
+        public bool? IsExpressCheckout { get; set; }
     }
 }
