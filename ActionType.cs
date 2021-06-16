@@ -18,6 +18,8 @@ namespace Plexo
         [EnumMember]
         ClientExtendAmount = 16,
         [EnumMember]
-        AskForTemporaryItems=32
+        AskForTemporaryItems=32,
+        [EnumMember]
+        ExpressCheckout = 64
     }
 }
