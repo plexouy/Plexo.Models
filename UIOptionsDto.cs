@@ -11,7 +11,7 @@ namespace Plexo
     public class UIOptionsDto
     {
         [DataMember]
-        public Dictionary<string, string> Colors { get; set; } // Primary color, Seconday color
+        public Dictionary<string, string> Colors { get; set; } // primary color, seconday color, background color
         [DataMember]
         public string Theme { get; set; } // default, dark
         [DataMember]
