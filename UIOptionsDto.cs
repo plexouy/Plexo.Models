@@ -17,6 +17,6 @@ namespace Plexo
         [DataMember]
         public bool AutoDarkTheme { get; set; } // Cambiar de tema automaticamente segun preferencias del usuario en su explorador
         [DataMember]
-        public String LogoURL { get; set; } // URL de Logo de 196x64
+        public string LogoURL { get; set; } // URL de Logo de 196x64
     }
 }
