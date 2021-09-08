@@ -11,14 +11,14 @@ namespace Plexo
     public class DisplayOptionsDto
     {
         [DataMember]
-        public bool Titles { get; set; } // Mostrar titulos
+        public bool? Titles { get; set; } // Mostrar titulos
         [DataMember]
-        public bool Details { get; set; } // Mostrar detalle de compra
+        public bool? Details { get; set; } // Mostrar detalle de compra
         [DataMember]
-        public bool Footer { get; set; } // Mostrar pie de pagina
+        public bool? Footer { get; set; } // Mostrar pie de pagina
         [DataMember]
-        public bool Logo { get; set; } // Mostrar logo
+        public bool? Logo { get; set; } // Mostrar logo
         [DataMember]
-        public bool Accessibility { get; set; } // Activar accesibilidad usando equalweb
+        public bool? Accessibility { get; set; } // Activar accesibilidad usando equalweb
     }
 }
