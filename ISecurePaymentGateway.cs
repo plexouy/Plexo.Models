@@ -71,6 +71,11 @@ namespace Plexo
         Task<ServerSignedResponse<PaymentInstrument>> AddInstrument(ClientSignedRequest<CreateBankInstrumentRequest> request);
 
         [OperationContract]
+        [WebInvoke(UriTemplate = "Instruments/ExternalAdd", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<ExternalPaymentInstrument>> AddExternal(ClientSignedRequest<CreateExternalInstrumentRequest> request);
+
+
+        [OperationContract]
         [WebInvoke(UriTemplate = "Instruments/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse> DeleteInstrument(ClientSignedRequest<DeleteInstrumentRequest> info);
 
