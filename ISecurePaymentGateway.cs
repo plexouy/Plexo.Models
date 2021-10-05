@@ -90,6 +90,10 @@ namespace Plexo
         [WebInvoke(UriTemplate = "Issuer", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<List<IssuerInfo>>> GetSupportedIssuers(ClientSignedRequest creq);
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "PaymentProcessors", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<List<IssuerPaymentProcessor>>> GetSupportedPaymentProcessors(ClientSignedRequest creq);
+
         #endregion
 
         #region Commerces
@@ -126,12 +130,7 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Commerce/Issuer/Delete", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse> DeleteIssuerCommerce(ClientSignedRequest<CommerceIssuerIdRequest> commerce);
-
-        [OperationContract]
-        [WebInvoke(UriTemplate = "Commerce/GetProvidedCodeCommerce", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<Commerce>> GetProvidedCodeCommerce(ClientSignedRequest<CommerceRequest> commerce);
-
+        Task<ServerSignedResponse> DeleteIssuerCommerce(ClientSignedRequest<CommerceIssuerIdRequest> commerce);  
 
         #endregion
 
