@@ -7,7 +7,7 @@ namespace Plexo
     public class IssuerPaymentProcessor
     {
         [DataMember]
-        public int Id { get; set; } // 4
+        public int IssuerId { get; set; } // 4
         [DataMember]
         public string Name { get; set; } // Mastercard
         [DataMember]

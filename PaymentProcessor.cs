@@ -8,7 +8,8 @@ namespace Plexo
     {
         [DataMember]
         public string Acquirer { get; set; }
+    
         [DataMember]
-        public IEnumerable<CommerceField> Fields { get; set; }
+        public List<CommerceField> Fields { get; set; }
     }
 }

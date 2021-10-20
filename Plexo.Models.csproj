@@ -64,6 +64,7 @@
     <Compile Include="CommerceIssuerIdRequest.cs" />
     <Compile Include="CommerceModifyRequest.cs" />
     <Compile Include="CommerceRequest.cs" />
+    <Compile Include="CommerceSettings.cs" />
     <Compile Include="CreateBankInstrumentRequest.cs" />
     <Compile Include="CreateExternalInstrumentRequest.cs" />
     <Compile Include="CybersourceQueries.cs" />
