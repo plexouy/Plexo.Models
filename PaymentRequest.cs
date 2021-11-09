@@ -30,5 +30,7 @@ namespace Plexo
         public string OptionalExternalPaymentInfo { get; set; }
         [DataMember]
         public bool? IsExpressCheckout { get; set; }
+        [DataMember]
+        public decimal? LoyaltyProgramAmount { get; set; }
     }
 }

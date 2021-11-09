@@ -43,7 +43,7 @@ namespace Plexo
         ShippingFirstName,
         ShippingLastName,
         ShippingPhoneNumber,
-
+        InternalPaymentCallback,
 
 
         //Provider Related Information starts at 0x400
@@ -61,6 +61,7 @@ namespace Plexo
         IntegerId = 0x509,
         RefundIntegerId = 0x510,
         ReserveIntegerId = 0x511,
+        BankId = 0x512,
 
         //Commerce Related Information starts at 0x800
         ProviderCommerceNumber = 0x801, //This Could be the commerce id (Master/Oca/Visa/Etc)

@@ -40,5 +40,7 @@ namespace Plexo
         public PaymentCode PaymentCode { get; set; }
         [DataMember]
         public long UTCUnixTimeExpiration { get; set; }
+        [DataMember]
+        public decimal? LoyaltyProgramAmount { get; set; }
     }
 }

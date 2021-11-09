@@ -67,6 +67,7 @@
     <Compile Include="CommerceModifyRequest.cs" />
     <Compile Include="CommerceRequest.cs" />
     <Compile Include="CreateBankInstrumentRequest.cs" />
+    <Compile Include="CreateExternalInstrumentRequest.cs" />
     <Compile Include="CybersourceQueries.cs" />
     <Compile Include="DeleteInstrumentRequest.cs" />
     <Compile Include="DisplayOptionsDto.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="ExpressCheckoutRequest.cs" />
     <Compile Include="ExpressCheckoutResult.cs" />
     <Compile Include="ExpressCheckoutSettingsDto.cs" />
+    <Compile Include="ExternalPaymentInstrument.cs" />
     <Compile Include="FieldInfo.cs" />
     <Compile Include="Helpers\FlowingOperationScope.cs" />
     <Compile Include="Helpers\OperationContextSynchronizationContext.cs" />
