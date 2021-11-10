@@ -44,6 +44,7 @@ namespace Plexo
         ShippingLastName,
         ShippingPhoneNumber,
         InternalPaymentCallback,
+        CustomInvoiceNumber,
 
 
         //Provider Related Information starts at 0x400
