@@ -12,6 +12,8 @@ namespace Plexo
         [EnumMember]
         Pending = 2,
         [EnumMember]
+        Created = 3,
+        [EnumMember]
         Denied = 10,
         [EnumMember]
         Expired = 20,
