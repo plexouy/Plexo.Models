@@ -49,6 +49,7 @@
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationInfo.cs" />
     <Compile Include="AuthorizationType.cs" />
+    <Compile Include="BuiltInPagesOptionsDto.cs" />
     <Compile Include="CancelRequest.cs" />
     <Compile Include="CardTypes.cs" />
     <Compile Include="Check.cs" />

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Plexo
 {
     [DataContract]
-    public class ExpressCheckoutSettingsDto
+    public class BuiltInPagesOptionsDto
     {
         [DataMember]
-        public DisplayOptionsDto Display { get; set; }
+        public bool? CheckoutSuccessPage { get; set; }
         [DataMember]
-        public BuiltInPagesOptionsDto? BuiltInPages { get; set; }
+        public bool? CheckoutErrorPage { get; set; }
     }
 }
