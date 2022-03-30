@@ -13,6 +13,6 @@ namespace Plexo
         [DataMember]
         public DisplayOptionsDto Display { get; set; }
         [DataMember]
-        public BuiltInPagesOptionsDto? BuiltInPages { get; set; }
+        public BuiltInPagesOptionsDto BuiltInPages { get; set; }
     }
 }
