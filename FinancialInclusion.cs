@@ -15,5 +15,8 @@ namespace Plexo
         public int InvoiceNumber { get; set; }
         [DataMember]
         public string InvoiceNumberStr { get; set; }
+        [DataMember]
+        public decimal? VATAmount { get; set; }
+
     }
 }
