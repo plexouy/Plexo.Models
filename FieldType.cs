@@ -45,6 +45,7 @@ namespace Plexo
         ShippingPhoneNumber,
         InternalPaymentCallback,
         CustomInvoiceNumber,
+        VATAmount,
 
 
         //Provider Related Information starts at 0x400
@@ -88,6 +89,8 @@ namespace Plexo
         PaymentProcessorId,
         LoanPaybackDate,
         LoanFeeAmount,
+        FingerprintOrgID,
+        FingerprintSessID,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
