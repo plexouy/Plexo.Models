@@ -16,5 +16,7 @@ namespace Plexo
         public Authorization AuthorizationData { get; set; }
         [DataMember]
         public Dictionary<FieldType, string> InstrumentData { get; set; }
+        [DataMember]
+        public bool? Void3DS { get; set; }
     }
 }
