@@ -91,6 +91,7 @@
     <Compile Include="IdentificationType.cs" />
     <Compile Include="InstrumentStatusEnum.cs" />
     <Compile Include="InstrumentWithMetadata.cs" />
+    <Compile Include="InternalFieldType.cs" />
     <Compile Include="ISecureCallback.cs" />
     <Compile Include="ISecurePaymentGateway.cs" />
     <Compile Include="IssuerData.cs" />
