@@ -99,6 +99,7 @@
     <Compile Include="IssuerRequest.cs" />
     <Compile Include="IssuerSignedRequest.cs" />
     <Compile Include="PaymentProcessor.cs" />
+    <Compile Include="PaymentProcessorField.cs" />
     <Compile Include="Reference.cs" />
     <Compile Include="CardStatus.cs" />
     <Compile Include="ClientSignedRequest.cs" />
