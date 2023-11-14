@@ -98,6 +98,10 @@ namespace Plexo
         SubCommerceLegalName, //FiservIPG Payfac
         SubCommerceState, //FiservIPG Payfac
         SubCommercePostalCode, //FiservIPG Payfac
+        BuyerFeeAmount,
+        IssuerFeeAmount,
+        TaxDiscountAmount,
+        TaxDiscountLaw,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information

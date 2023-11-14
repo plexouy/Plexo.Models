@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace Plexo
 {
@@ -17,6 +18,7 @@ namespace Plexo
         [DataMember]
         public int? PaymentFacilitatorId { get; set; }
         [DataMember]
+        [JsonIgnore]
         public int? PaymentProcessorId { get; set; }
     }
 }
