@@ -28,6 +28,8 @@ namespace Plexo
         public List<string> LimitBanks { get; set; }
         [DataMember]
         public WebFormSettingsDto WebFormSettings { get; set; }
+        [DataMember]
+        public bool? ExtendedBINInformation { get; set; }
 
     }
 }

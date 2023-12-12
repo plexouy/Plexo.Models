@@ -49,6 +49,7 @@ namespace Plexo
         CrossBankTransfers,
         SourceBank,
         DestinationBank,
+        Criptograma,
 
         //Provider Related Information starts at 0x400
         Provider = 0x0401, //Example Visa
@@ -102,6 +103,9 @@ namespace Plexo
         IssuerFeeAmount,
         TaxDiscountAmount,
         TaxDiscountLaw,
+        BuyerFeeRate,
+        IssuerFeeRate,
+        AmountBrl,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information
