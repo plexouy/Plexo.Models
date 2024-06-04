@@ -20,6 +20,10 @@ namespace Plexo
         Task<ServerResponse<Transaction>> Purchase(PaymentRequest payment);
 
         [OperationContract]
+        [WebInvoke(UriTemplate = "Operation/SplitPurchase", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<Transaction>> SplitPurchase(ClientSignedRequest<SplitPaymentRequest> payment);
+
+        [OperationContract]
         [WebInvoke(UriTemplate = "ExpressCheckout", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerResponse<Session>> ExpressCheckout(ExpressCheckoutRequest expressCheckout);
 

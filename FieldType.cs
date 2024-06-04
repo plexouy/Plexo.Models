@@ -112,6 +112,7 @@ namespace Plexo
         Pan = 0x8101,
         Token = 0x8102,
         UniqueId = 0x8103,
+        NetworkToken = 0x8104,
 
         //Non Storable Secure Information 0x80;
         Pin = 0x8181,
