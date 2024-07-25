@@ -25,7 +25,7 @@ namespace Plexo
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/SplitPurchase", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
-        Task<ServerSignedResponse<Transaction>> SplitPurchase(ClientSignedRequest<SplitPaymentRequest> payment);
+        Task<ServerSignedResponse<SplittedTransaction>> SplitPurchase(ClientSignedRequest<SplitRequest> payment);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Cancel", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]

@@ -134,6 +134,8 @@
     <Compile Include="SignedObject.cs" />
     <Compile Include="ServerSignedResponse.cs" />
     <Compile Include="SplitPaymentRequest.cs" />
+    <Compile Include="SplitRequest.cs" />
+    <Compile Include="SplittedTransaction.cs" />
     <Compile Include="StateObject.cs" />
     <Compile Include="TimeLimit.cs" />
     <Compile Include="TokenizationSettingsDto.cs" />

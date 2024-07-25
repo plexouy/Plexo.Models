@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 namespace Plexo
 {
     [DataContract]
-    public class SplitPaymentRequest
+    public class SplittedTransaction
     {
         [DataMember]
-        public PaymentRequest PaymentRequest { get; set; }
+        public Transaction PurchaseTransaction { get; set; }
         [DataMember]
-        public SplitRequest SplitRequest { get; set; }
+        public Transaction SplitTransaction { get; set; }
+        [DataMember]
+        public TransactionResult Status { get; set; }
     }
 }
