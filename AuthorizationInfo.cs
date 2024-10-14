@@ -9,5 +9,7 @@ namespace Plexo
         public AuthorizationType Type { get; set; }
         [DataMember]
         public string MetaReference { get; set; }
+        [DataMember]
+        public bool? ExtendedBINInformation { get; set; }
     }
 }

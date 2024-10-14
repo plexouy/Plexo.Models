@@ -24,5 +24,7 @@ namespace Plexo
         public string SplitOptionalMetadata { get; set; }
         [DataMember]
         public PaymentInstrumentInput SplitPaymentInstrumentInput { get; set; }
+        [DataMember]
+        public string CallbackURL { get; set; }
     }
 }

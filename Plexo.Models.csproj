@@ -80,6 +80,7 @@
     <Compile Include="Exceptions\ResultCodeException.cs" />
     <Compile Include="Exceptions\SignatureException.cs" />
     <Compile Include="ExportType.cs" />
+    <Compile Include="ExpressCheckoutSplitRequest.cs" />
     <Compile Include="ExpressCheckoutRequest.cs" />
     <Compile Include="ExpressCheckoutResult.cs" />
     <Compile Include="ExpressCheckoutSettingsDto.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="IssuerPaymentProcessor.cs" />
     <Compile Include="IssuerRequest.cs" />
     <Compile Include="IssuerSignedRequest.cs" />
+    <Compile Include="PaymentInstrumentExtended.cs" />
     <Compile Include="PaymentProcessor.cs" />
     <Compile Include="PaymentProcessorField.cs" />
     <Compile Include="Reference.cs" />
@@ -136,7 +138,10 @@
     <Compile Include="SplitPaymentRequest.cs" />
     <Compile Include="SplitRequest.cs" />
     <Compile Include="SplittedTransaction.cs" />
+    <Compile Include="SplittedTransactionCallback.cs" />
     <Compile Include="StateObject.cs" />
+    <Compile Include="ThreeDSSession.cs" />
+    <Compile Include="ThreeDSValidation.cs" />
     <Compile Include="TimeLimit.cs" />
     <Compile Include="TokenizationSettingsDto.cs" />
     <Compile Include="Transaction.cs" />

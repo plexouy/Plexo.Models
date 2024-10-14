@@ -16,8 +16,16 @@ namespace Plexo
         Task<ServerSignedResponse<Session>> Authorize(ClientSignedRequest<Authorization> authorization);
 
         [OperationContract]
+        [WebInvoke(UriTemplate = "3DSValidation", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<ThreeDSSession>> ThreeDSValidate(ClientSignedRequest<ThreeDSValidation> threedsvalidation);
+
+        [OperationContract]
         [WebInvoke(UriTemplate = "ExpressCheckout", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         Task<ServerSignedResponse<Session>> ExpressCheckout(ClientSignedRequest<ExpressCheckoutRequest> expressCheckout);
+        
+        [OperationContract]
+        [WebInvoke(UriTemplate = "ExpressCheckoutSplit", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
+        Task<ServerSignedResponse<Session>> ExpressCheckoutSplit(ClientSignedRequest<ExpressCheckoutSplitRequest> expressCheckout);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "Operation/Purchase", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]

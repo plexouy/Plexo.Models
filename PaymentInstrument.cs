@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace Plexo
 {
     [DataContract]
-    public class PaymentInstrument
+    public class PaymentInstrument : PaymentInstrumentExtended
     {
         [DataMember]
         public string InstrumentToken { get; set; }
