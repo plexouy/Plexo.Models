@@ -32,5 +32,7 @@ namespace Plexo
         public bool? IsExpressCheckout { get; set; }
         [DataMember]
         public decimal? LoyaltyProgramAmount { get; set; }
+        [DataMember]
+        public string ThreeDSReferenceId { get; set; }
     }
 }
