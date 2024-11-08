@@ -15,5 +15,8 @@ namespace Plexo
 
         [DataMember]
         public PaymentRequest PaymentData { get; set; }
+
+        [DataMember]
+        public bool? Disable3DS { get; set; }
     }
 }
