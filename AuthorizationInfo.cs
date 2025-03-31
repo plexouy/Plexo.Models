@@ -11,5 +11,7 @@ namespace Plexo
         public string MetaReference { get; set; }
         [DataMember]
         public bool? ExtendedBINInformation { get; set; }
+        [DataMember]
+        public bool? UniqueIDInformation { get; set; }
     }
 }
