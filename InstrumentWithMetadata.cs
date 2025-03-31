@@ -11,5 +11,7 @@ namespace Plexo
         public string OptionalMetadata { get; set; }
         [DataMember]
         public string OptionalBIN { get; set; }
+        [DataMember]
+        public string OptionalUniqueID { get; set; }
     }
 }
