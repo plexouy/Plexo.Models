@@ -12,6 +12,9 @@ namespace Plexo
         public decimal Amount { get; set; }
 
         [DataMember]
+        public decimal? TaxedAmount { get; set; }
+
+        [DataMember]
         public int? OptionalClientId { get; set; }
     }
 }
