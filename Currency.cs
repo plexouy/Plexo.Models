@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
 namespace Plexo
@@ -13,5 +14,8 @@ namespace Plexo
         public string Plural { get; set; }
         [DataMember]
         public string Symbol { get; set; }
+        [DataMember]
+        [JsonIgnore]
+        public string ISOCode { get; set; }
     }
 }
