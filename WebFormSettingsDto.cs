@@ -16,5 +16,7 @@ namespace Plexo
         public ExpressCheckoutSettingsDto ExpressCheckout { get; set; } // Opciones especificas de ExpressCheckout
         [DataMember]
         public TokenizationSettingsDto Tokenization { get; set; } // Opciones especificas de Tokenization
+        [DataMember]
+        public TokenizationSettingsFields Fields { get; set; }
     }
 }
