@@ -11,7 +11,7 @@ namespace Plexo
     public class TokenizationSettingsFieldValues
     {
         [DataMember]
-        public TokenizationFieldVisibility Visible { get; set; } = TokenizationFieldVisibility.OnlyIfRequired;
+        public string Visible { get; set; } = "onlyIfRequired"; //always / never
         [DataMember]
         public bool ReadOnly { get; set; } = false;
     }

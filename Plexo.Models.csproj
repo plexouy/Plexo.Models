@@ -143,7 +143,6 @@
     <Compile Include="ThreeDSSession.cs" />
     <Compile Include="ThreeDSValidation.cs" />
     <Compile Include="TimeLimit.cs" />
-    <Compile Include="TokenizationFieldVisibility.cs" />
     <Compile Include="TokenizationSettingsDto.cs" />
     <Compile Include="TokenizationSettingsFields.cs" />
     <Compile Include="TokenizationSettingsFieldValues.cs" />
