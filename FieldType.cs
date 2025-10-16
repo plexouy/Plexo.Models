@@ -106,6 +106,7 @@ namespace Plexo
         BuyerFeeRate,
         IssuerFeeRate,
         AmountBrl,
+        KoinMerchantId,
 
         //Secure Information Starts at 0x8100  //Private Flag + User Flag
         //Secure User Generic Information

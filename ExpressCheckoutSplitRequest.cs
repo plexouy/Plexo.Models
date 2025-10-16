@@ -15,6 +15,8 @@ namespace Plexo
 
         [DataMember]
         public SplitRequest PaymentData { get; set; }
-        
+
+        [DataMember]
+        public bool? Disable3DS { get; set; }
     }
 }
